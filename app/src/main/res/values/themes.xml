@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Lab5_20200403" parent="Base.Theme.Lab5_20200403" />
+    <style name="Theme.Lab5_20200403" parent="Base.Theme.Lab5_20200403">
+        <item name="android:fontFamily">@font/varelaround</item>
+        <item name="fontFamily">@font/varelaround</item>
+    </style>
 </resources>
