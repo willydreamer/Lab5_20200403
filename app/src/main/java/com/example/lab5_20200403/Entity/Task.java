@@ -4,47 +4,87 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Task implements Serializable {
-    private String nombre;
-    private String descripcion;
-    private Date fechaVencimiento;
-    private Date fechaRecordatorio;
+    private String taskName;
+    private String taskDescription;
+    private int day;
+    private int month;
+    private int year;
+    private int hour;
+    private int minute;
+    private String importance;
 
-    public Task(String nombre, String descripcion, Date fechaVencimiento, Date fechaRecordatorio) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.fechaVencimiento = fechaVencimiento;
-        this.fechaRecordatorio = fechaRecordatorio;
+    public Task(String taskName, String taskDescription, int day, int month, int year, int hour, int minute, String importance) {
+        this.taskName = taskName;
+        this.taskDescription = taskDescription;
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.hour = hour;
+        this.minute = minute;
+        this.importance = importance;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getTaskName() {
+        return taskName;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getTaskDescription() {
+        return taskDescription;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setTaskDescription(String taskDescription) {
+        this.taskDescription = taskDescription;
     }
 
-    public Date getFechaVencimiento() {
-        return fechaVencimiento;
+    public int getDay() {
+        return day;
     }
 
-    public void setFechaVencimiento(Date fechaVencimiento) {
-        this.fechaVencimiento = fechaVencimiento;
+    public void setDay(int day) {
+        this.day = day;
     }
 
-    public Date getFechaRecordatorio() {
-        return fechaRecordatorio;
+    public int getMonth() {
+        return month;
     }
 
-    public void setFechaRecordatorio(Date fechaRecordatorio) {
-        this.fechaRecordatorio = fechaRecordatorio;
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
+    }
+
+    public String getImportance() {
+        return importance;
+    }
+
+    public void setImportance(String importance) {
+        this.importance = importance;
     }
 }

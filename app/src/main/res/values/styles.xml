@@ -6,4 +6,21 @@
         <item name="android:fontFamily">@font/varelaround</item>
         <item name="fontFamily">@font/varelaround</item>
     </style>
+
+    <style name="CustomDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:headerBackground">#4E8DC3</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#80FFFFFF</item>
+    </style>
+
+    <style name="CustomTimePicker" parent="android:Widget.Material.TimePicker">
+        <item name="android:headerBackground">#4E8DC3</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#80FFFFFF</item>
+    </style>
+
+    <style name="CustomEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>

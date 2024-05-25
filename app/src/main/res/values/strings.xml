@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Lab5_20200403</string>
+    <string-array name="importance_levels">
+        <item>Alta</item>
+        <item>Media</item>
+        <item>Baja</item>
+    </string-array>
 </resources>

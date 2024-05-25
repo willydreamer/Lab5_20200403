@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CreateTaskActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".CreateTaskActivity">
+
+            <!-- Header with back button and title -->
+            <LinearLayout
+                android:padding="20dp"
+                android:id="@+id/header_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#4E8DC3"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_marginStart="15dp"
+                    android:id="@+id/backButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_arrow_back_ios_24px"
+                    android:contentDescription="Back"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear Tarea"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <!-- Form content -->
+            <LinearLayout
+                android:id="@+id/middle"
+                android:paddingHorizontal="30dp"
+                android:paddingTop="20dp"
+                android:layout_below="@id/header_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_bottom"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/taskNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre de la tarea"
+                    android:padding="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#80FFFFFF"
+                    style="@style/CustomEditTextStyle"/>
+
+                <EditText
+                    android:id="@+id/taskDescriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripción"
+                    android:padding="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@android:color/white"
+                    style="@style/CustomEditTextStyle"
+                    android:textColorHint="#80FFFFFF"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Notifications Icon -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_today_24px"
+                        app:tint="#FFFFFF" />
+
+                    <!-- URGENT TextView -->
+                    <TextView
+                        android:gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha de vencimiento"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <DatePicker
+                    android:id="@+id/taskDatePicker"
+                    android:layout_width="351dp"
+                    android:layout_height="138dp"
+                    android:layout_marginBottom="16dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:theme="@style/CustomDatePicker"/>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="20dp"
+                android:paddingHorizontal="30dp"
+                android:layout_below="@id/middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Notifications Icon -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_notifications_24px"
+                        app:tint="#4E8DC3" />
+
+                    <!-- URGENT TextView -->
+                    <TextView
+                        android:gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hora de recordatorio"
+                        android:textColor="#4E8DC3"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <TimePicker
+                    android:id="@+id/reminderTimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="141dp"
+                    android:layout_marginBottom="16dp"
+                    android:timePickerMode="spinner" />
+
+                <LinearLayout
+                    android:id="@+id/alert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Notifications Icon -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_label_important_24px"
+                        app:tint="#4E8DC3" />
+
+                    <!-- URGENT TextView -->
+                    <TextView
+                        android:gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Importancia"
+                        android:textColor="#4E8DC3"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+            <Spinner
+                android:id="@+id/importanceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/importance_levels"
+                android:layout_marginBottom="16dp"
+                android:padding="10dp"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/createTaskButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:textSize="17dp"
+                android:backgroundTint="#4E8DC3"
+                android:textColor="@android:color/white"
+                android:padding="10dp" />
+        </LinearLayout>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

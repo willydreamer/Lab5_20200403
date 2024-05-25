@@ -12,7 +12,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:paddingVertical="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="10dp">
 
         <!-- LinearLayout for URGENT TextView and Notifications Icon -->
         <LinearLayout
@@ -24,14 +26,15 @@
 
             <!-- Notifications Icon -->
             <ImageView
+                android:id="@+id/iconoImportancia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_notifications_24px"
+                android:src="@drawable/ic_label_important_24px"
                 app:tint="#FF6347" />
 
             <!-- URGENT TextView -->
             <TextView
-                android:id="@+id/urgentLabel"
+                android:id="@+id/importanciaText"
                 android:gravity="bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,26 +69,56 @@
             android:layout_marginTop="4dp"/>
 
         <!-- Date TextView -->
-        <TextView
-            android:id="@+id/fecha"
+
+
+        <LinearLayout
+            android:layout_below="@id/subtitleTextDescripcion"
+            android:id="@+id/alarmaLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10 - 11 AM"
-            android:textColor="#A9A9A9"
-            android:textSize="14sp"
-            android:layout_below="@id/subtitleTextDescripcion" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/fechaVencimiento"
+                android:layout_below="@id/subtitleTextDescripcion"
+                android:gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23 de Mayo, 2024"
+                android:textColor="#B0000080"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_marginStart="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_notifications_24px"
+                app:tint="#B0000080" />
+            <TextView
+                android:id="@+id/horaRecordatorio"
+                android:gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00 pm"
+                android:textColor="#B0000080"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
 
         <!-- Three dots menu icon -->
-        <ImageView
+        <ImageButton
             android:id="@+id/menuIcon"
-            android:layout_width="51dp"
+            android:layout_width="31dp"
             android:layout_height="34dp"
+            android:layout_marginStart="300dp"
             android:layout_alignTop="@id/alert"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="30dp"
-            android:contentDescription="More options"
+            android:background="@android:color/transparent"
             android:src="@drawable/ic_more_vert_24px" />
 
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>
